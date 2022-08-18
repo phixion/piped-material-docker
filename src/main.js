@@ -14,16 +14,18 @@ import { EDSInitializationPromise } from '@/plugins/eds'
 
 Vue.config.productionTip = false
 
-EDSInitializationPromise.then(() => Promise.all([
-	store.dispatch('prefs/loadState'),
-	store.dispatch('auth/initializeAuth'),
-	initializeLocalLocale()
-])).then(() => {
-	new Vue({
-		vuetify,
-		i18n,
-		store,
-		router,
-		render: h => h(App)
-	}).$mount('#app')
-})
+EDSInitializationPromise
+	.then(() => Promise.all([
+		store.dispatch('prefs/loadState'),
+		store.dispatch('auth/initializeAuth'),
+		initializeLocalLocale()
+	]))
+	.then(() => {
+		new Vue({
+			vuetify,
+			i18n,
+			store,
+			router,
+			render: h => h(App)
+		}).$mount('#app')
+	})

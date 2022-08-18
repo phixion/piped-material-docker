@@ -25,6 +25,7 @@
     "dompurify": "^2.4.0",
     "eslint-config-mojee-vue": "https://bafybeicmcey56ktfjkkfp2jayvbszdilqqg26t2ivmqnbfpwinpzerastq.ipfs.cf-ipfs.com/",
     "format-duration": "^1.4.0",
+    "futoin-hkdf": "^1.5.1",
     "i18n-iso-countries": "^6.8.0",
     "javascript-time-ago": "https://cf-ipfs.com/ipfs/QmSf7qn1E3GrBsriwrRCvJe9it45gPXGeyZ7N986ceoeAU?filename=jta.tar.gz",
     "libeds": "https://git.maharshi.ninja/root/libeds/archive/0e3bf13f6b865ed1e4e6cc9a10ec5030ade0dce0.tar.gz",
