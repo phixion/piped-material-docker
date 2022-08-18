@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 import TimeAgo from 'javascript-time-ago'
 
+import { EDS } from '@/plugins/eds'
 import store from '@/store'
 import ENTranslations from '@/translations/en.json'
 
@@ -158,11 +159,11 @@ export async function changeLocale (lang) {
 		loadFormatting(lang)
 	])
 	i18n.locale = lang
-	window.localStorage.setItem('LOCALE', lang)
+	await EDS.setKey('locale', lang)
 }
 
-function initializeLocalLocale () {
-	let lang = window.localStorage.getItem('LOCALE')
+export async function initializeLocalLocale () {
+	let lang = await EDS.getKey('locale')
 	if (lang == null) {
 		for (const possible of navigator.languages) {
 			if (SUPPORTED_LANGUAGES.includes(possible)) {
@@ -176,5 +177,3 @@ function initializeLocalLocale () {
 	}
 	return changeLocale(lang)
 }
-
-export const i18nInitialized = initializeLocalLocale()

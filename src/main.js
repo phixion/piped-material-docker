@@ -4,20 +4,21 @@ import App from './App.vue'
 import 'antar-hinted/antar.css'
 import '@/styles/main.scss'
 
-import { i18n, i18nInitialized } from '@/plugins/i18n'
+import { i18n, initializeLocalLocale } from '@/plugins/i18n'
 import vuetify from '@/plugins/vuetify'
 import store from '@/store'
 import router from '@/router'
 
 import './registerServiceWorker'
+import { EDSInitializationPromise } from '@/plugins/eds'
 
 Vue.config.productionTip = false
 
-Promise.all([
+EDSInitializationPromise.then(() => Promise.all([
 	store.dispatch('prefs/loadState'),
 	store.dispatch('auth/initializeAuth'),
-	i18nInitialized
-]).then(() => {
+	initializeLocalLocale()
+])).then(() => {
 	new Vue({
 		vuetify,
 		i18n,
