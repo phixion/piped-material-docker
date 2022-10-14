@@ -23,7 +23,7 @@ on:
   push:
     branches:
       - 'master'
-#      - 'feature-eds'
+      - 'feature-eds'
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -48,11 +48,11 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/piped-material-docker
+          images: ridelore/piped-material-docker
           tags: |
             # set latest tag for master branch
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
-#            type=raw,value=latest-eds,enable=${{ github.ref == format('refs/heads/{0}', 'feature-eds') }}
+            type=raw,value=latest-eds,enable=${{ github.ref == format('refs/heads/{0}', 'feature-eds') }}
           labels: |
             maintainer=phixion
             org.opencontainers.image.title='piped-material-docker'
@@ -64,5 +64,5 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/piped-material-docker:${{ steps.meta.outputs.tags }}
+          tags: ridelore/piped-material-docker:${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.lables }}
