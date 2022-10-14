@@ -28,7 +28,7 @@
     "i18n-iso-countries": "^6.8.0",
     "javascript-time-ago": "https://cf-ipfs.com/ipfs/QmSf7qn1E3GrBsriwrRCvJe9it45gPXGeyZ7N986ceoeAU?filename=jta.tar.gz",
     "lodash-es": "^4.17.21",
-    "marked": "^3.0.8",
+    "marked": "^4.0.10",
     "mux.js": "^5.14.1",
     "psychic-tiny-keys": "https://bafybeidtcftvyig2w34aodqfiqiige5zgwjntqtt6ofrqrydf3hydwgv4u.ipfs.cf-ipfs.com/?filename=psychic-tiny-keys-v0.0.1.tar.gz",
     "register-service-worker": "^1.7.2",
