@@ -48,7 +48,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: phixion/piped-material-docker
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/piped-material-docker
           tags: |
             # set latest tag for master branch
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
