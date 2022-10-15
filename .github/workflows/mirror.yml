@@ -24,7 +24,7 @@ on:
 
 jobs:
   mirror:
-   name: git pull+push to update from remote repo
+   name: mirror
    runs-on: ubuntu-latest
    steps:   
      - 
