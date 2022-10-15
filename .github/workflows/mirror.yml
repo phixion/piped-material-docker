@@ -24,8 +24,11 @@ on:
 
 jobs:
   mirror:
-    runs-on: ubuntu-latest
-    - name: git pull+push to update from remote repo
-      run: |-
-        git pull orig master
-        git push origin master
+   name: git pull+push to update from remote repo
+   runs-on: ubuntu-latest
+   steps:   
+     - 
+       name: git pull+push to update from remote repo
+       run: |-
+         git pull orig master
+         git push origin master
