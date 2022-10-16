@@ -23,7 +23,6 @@ on:
   push:
     branches:
       - 'master'
-      - 'feature-eds'
 jobs:
   docker:
     name: Push image to dockerhub + ghcr
@@ -65,7 +64,6 @@ jobs:
           tags: 
             # set latest tag for master branch
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
-            type=raw,value=latest-eds,enable=${{ github.ref == format('refs/heads/{0}', 'feature-eds') }}
           labels: 
             maintainer=phixion
             org.opencontainers.image.title='piped-material-docker'
