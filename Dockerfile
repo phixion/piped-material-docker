@@ -1,21 +1,12 @@
-<<<<<<< HEAD
 FROM node:slim as build-stage
-=======
-FROM node:slim
->>>>>>> master
 WORKDIR /app
 COPY package*.json ./
 RUN ["/bin/bash", "-c", "set -o pipefail && npm install"]
 COPY ./ .
 RUN ["/bin/bash", "-c", "set -o pipefail && npm run build"]
-<<<<<<< HEAD
 
 FROM nginx:stable-alpine as production-stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
-=======
-RUN ["chmod", "+x", "./entrypoint.sh"]
-ENTRYPOINT ["./entrypoint.sh"]
->>>>>>> master
