@@ -21,6 +21,7 @@ name: mirror remote repository
 on:
   schedule:
     - cron: "0 */4 * * *"
+<<<<<<< HEAD
 jobs:
   mirror:
     name: mirror
@@ -30,3 +31,16 @@ jobs:
         run: |-
           git pull orig master
           git push origin master
+=======
+
+jobs:
+  mirror:
+   name: mirror
+   runs-on: ubuntu-latest
+   steps:   
+     - 
+       name: git pull+push to update from remote repo
+       run: |-
+         git pull orig master
+         git push origin master
+>>>>>>> master
