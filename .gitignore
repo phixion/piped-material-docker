@@ -212,3 +212,9 @@ dist
 
 # SvelteKit build / generate output
 .svelte-kit
+
+# docker-compose.yml
+docker-compose.yml
+
+# .vscode
+.vscode/**
