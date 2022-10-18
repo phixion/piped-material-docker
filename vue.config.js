@@ -18,8 +18,8 @@ module.exports = {
 	],
 	pwa: {
 		name: 'Piped Material',
-		themeColor: '#efcac3',
-		msTileColor: '',
+		themeColor: '#282A35',
+		msTileColor: '#63DDFB',
 		appleMobileWebAppCapable: 'yes',
 		appleMobileWebAppStatusBarStyle: 'black',
 		iconPaths: {
