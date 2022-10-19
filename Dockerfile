@@ -3,6 +3,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN ["/bin/bash", "-c", "set -o pipefail && npm install"]
 COPY ./ .
+RUN ["/bin/bash", "-c", "sed -i 's/#efcac3/#424242/g' vue.config.js"]
+RUN ["/bin/bash", "-c", "sed -i 's/#efcac3/#424242/g' src/App.vue"]
 RUN ["/bin/bash", "-c", "set -o pipefail && npm run build"]
 
 FROM nginx:stable-alpine as production-stage

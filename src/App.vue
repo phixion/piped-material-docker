@@ -3,7 +3,7 @@
         <v-app-bar
             app
             dense
-            color="#efcac3"
+            color="#282A35"
             light
             v-if="$vuetify.breakpoint.width > 1000 && !$store.getters['prefs/isEmbedded']"
             class="desktop-buttons-container"
