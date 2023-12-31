@@ -34,7 +34,7 @@
     "register-service-worker": "^1.7.2",
     "sass-loader": "^10",
     "shaka-player": "https://bafybeihxsmiw36fypudxj7ert6znaktg2ojwdbthnrbq7sho3ovurkeuzq.ipfs.cf-ipfs.com/",
-    "vue": "^2.7.10",
+    "vue": "^3.0.0",
     "vue-i18n": "^8.27.2",
     "vue-json-viewer": "^2.2.22",
     "vue-meta": "^2.4.0",
